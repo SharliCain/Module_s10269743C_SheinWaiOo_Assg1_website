@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css"/>
+        <link 
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <title>Welcome to Kicks On A Dime</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-flex container">
+                <div class="logo">
+                    <img src="images/KICKS ON A DIME.svg" alt="Kicks">
+
+                </div>
+                
+                <div class="main-menu-items">
+                    <ul class="main-menu-list">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="men.html">Men</a>
+                        </li>
+                        <li>
+                            <a href="women.html">Women</a>
+                        </li>
+                        <li>
+                            <a href="kids.html">Kids</a>
+                        </li>
+                        <li>
+                            <a href="edition.html">Limited Edition</a>
+                        </li>
+                        <li>
+                            <a href="account.html" class="btn">
+                                Sign In
+                            </a>
+                        </li>
+                        <li>
+                            <a href="heart.html">
+                                <div class="heart" title="Saved Items"></div>
+                            </a>
+                        </li>
+
+                       <li>
+                        <a href="cart.html">
+                            <img src="images/cart.png" alt="Shopping">
+                        </a>
+                       </li>                
+                    </ul>
+                </div>
+
+                
+
+
+
+                <!-- Mobile menu -->
+
+                <div class="mobile-menu">
+                    <div class="mobile-menu-toggle">
+                        <div class="menu-icon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        
+                    </div>
+                    <div class="mobile-menu-items">
+                        <ul class="mobile-menu-list">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="men.html">Men</a>
+                            </li>
+                            <li>
+                                <a href="women.html">Women</a>
+                            </li>
+                            <li>
+                                <a href="kids.html">Kids</a>
+                            </li>
+                            <li>
+                                <a href="edition.html">Limited Edition</a>
+                            </li>
+                            <li>
+                                <a href="account.html" class="btn">
+                                    Sign In
+                                </a>
+                            </li>
+                            <li>
+                                <a href="heart.html">
+                                    <div class="heart" title="Saved Items"></div>
+                                </a>
+                            </li>
+    
+                           <li>
+                            <a href="cart.html">
+                                <img src="images/cart.png" alt="Shopping">
+                            </a>
+                           </li>
+    
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </nav>
+
+        <header class="men-banner">
+            <img src="images/BannerAboutUs.jpg" alt="Men's Banner">
+        </header>
+
+        <div class="checkout-container">
+            <div class="row">
+                <div class="col-75">
+                    <div class="container">
+                        <form action="/action_page.php">
+                            <div class="row">
+                                <div class="col-50">
+                                    <h3>Billing Address</h3>
+                                    <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                                    <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                    <input type="text" id="email" name="email" placeholder="john@example.com">
+                                    <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                                    <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                    <label for="city"><i class="fa fa-institution"></i> City</label>
+                                    <input type="text" id="city" name="city" placeholder="New York">
+                                    <div class="row">
+                                        <div class="col-50">
+                                            <label for="state">State</label>
+                                            <input type="text" id="state" name="state" placeholder="NY">
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="zip">Zip</label>
+                                            <input type="text" id="zip" name="zip" placeholder="10001">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-50">
+                                    <h3>Payment</h3>
+                                    <label for="fname">Accepted Cards</label>
+                                    <div class="icon-container">
+                                        <img src="images/visa.png" alt="Visa">
+                                        <img src="images/master.png" alt="MasterCard">
+                                        <img src="images/paypal.png" alt="PayPal">
+                                    </div>
+                                    <label for="cname">Name on Card</label>
+                                    <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                    <label for="ccnum">Credit card number</label>
+                                    <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                    <label for="expmonth">Exp Month</label>
+                                    <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                                    <div class="row">
+                                        <div class="col-50">
+                                            <label for="expyear">Exp Year</label>
+                                            <input type="text" id="expyear" name="expyear" placeholder="2023">
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="cvv">CVV</label>
+                                            <input type="text" id="cvv" name="cvv" placeholder="123">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <label>
+                                <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                            </label>
+                            
+                            <!-- <input type="submit" value="Continue to checkout" class="btn"> -->
+                            <a href="payment-success.html" class="btn">Continue to checkout</a>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="col-25">
+                    <div class="container">
+                        <h4>Product <span class="price">Price</span></h4>
+                        <p><a href="classicChuck.html">Chuck Taylor</a> <span class="price">$89.00</span></p>
+                        <hr>
+                        <p>Total <span class="price total-price">$89.00</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    
+
+       
+
+
+        
+      
+                
+
+            
+        <footer class="footer">
+            <div class="container grid grid--4-cols">
+                <!-- Logo and Social Links -->
+                <div class="logo-col">
+                    <div class="footer-logo">
+                        <img src="images/KICKS ON A DIME.svg" alt="Kicks On A Dime Logo">
+                    </div>
+                    <div class="social-links">
+                        <ul>
+                            <li><a href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
+                            <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+                            <li><a href="#"><img src="images/twitter.png" alt="Twitter"></a></li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Contact Information -->
+                <div class="address-col">
+                    
+                    <a href="contact.html" class="footer-heading">Contact Us</a>
+                    <address>
+                        
+                        <ul>
+                            <li><p>68 Orchard Road, #05-123 Plaza Singapura, Singapore 238839</p> </li>
+                            <li><a href="tel:45243676">45243676</a></li>
+                            <li><a href="mailto:hello@kicksonadime.com">hello@kicksonadime.com</a></li>
+                        </ul>
+                       
+                          
+                        
+                        
+                    </address>
+                </div>
+        
+                <!-- Account Section -->
+                <div class="nav-col">
+                    
+                    <a href="account.html" class="footer-heading">Account</a>
+                    <ul>
+                        <li><a href="#">Sign In</a></li>
+                    </ul>
+                </div>
+        
+                <!-- About Us Section -->
+                <div class="nav-col">
+                    <a href="aboutus.html" class="footer-heading">About Us</a>
+                    
+                    <ul>
+                        <li><a href="#">Privacy & terms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        
+        <script src="script.js" ></script>
+    </body>
+</html>
