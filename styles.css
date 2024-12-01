@@ -1,0 +1,2059 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pimary-color: #fc5d66;
+    --secondary-color: #ffc05a;
+    --light-color: #f9fafb;
+    --dark-color: #272d35;
+}
+
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    
+    background-color: #f3f4f8; /* Light grey background for the body */
+
+    /* Sign up form */
+    
+
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* Utility */
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    /* max-height: 30px; */
+}
+
+.container-sm{
+    max-width: 1000px;
+    
+   
+}
+
+
+
+.btn {
+    display: inline-block;
+    padding: 1.6rem 2.6rem;
+    border: 1px solid #a5a7b8;
+    border-radius: 32px;
+    background: #74cbdb;
+    color: var(--dark-color);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background: #81849f;
+    color: white;
+    border-color: white;
+}
+/* Navbar */
+.navbar {
+    background-color: #81849f;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar img{
+    width:100px;
+    height: 100px;
+    
+}
+
+.navbar .main-menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    font-weight: 600;
+}
+
+.navbar a{
+    color: white;
+}
+
+.navbar a:hover {
+    color: var(--secondary-color);
+    
+}
+
+
+
+
+
+
+
+
+/* Icons */
+.navbar a img{
+    width: auto;
+    height: 30px;
+    
+}
+
+/* Sign In Buttton */
+.navbar .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid #a5a7b8;
+    border-radius: 32px;
+    background: #74cbdb;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.navbar .btn:hover {
+    background: #81849f;
+    color: white;
+    border-color: white;
+    transform: scale(1.1);
+}
+
+
+
+
+/* Heart Icon */
+.heart {
+    position: relative;
+    width: 12px; /* Smaller width */
+    height: 12px; /* Smaller height */
+    background-color: white; /* White color */
+    transform: rotate(-45deg);
+    margin: 0 auto; /* Center alignment */
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 12px; /* Match the width of .heart */
+    height: 12px; /* Match the height of .heart */
+    background-color: white; /* White color */
+    border-radius: 50%; /* Circular for the top parts of the heart */
+}
+
+.heart::before {
+    top: -6px; /* Adjusted for smaller size */
+    left: 0;
+}
+
+.heart::after {
+    left: 6px; /* Adjusted for smaller size */
+    top: 0;
+}
+
+
+
+
+
+/* Youtube Video */
+/* YouTube Video Container */
+.video-container {
+    width: 100%; /* Full width */
+    position: relative; /* For absolutely positioned iframe */
+    padding-bottom: 56.25%; /* Aspect ratio: 16:9 (9 / 16 = 0.5625 = 56.25%) */
+    background-color: #f4f4f4; /* Light background for visibility */
+    overflow: hidden;
+    margin: 0 auto; /* Center the video on the page */
+}
+
+/* Responsive Iframe */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    border: none; /* No border for a clean look */
+}
+
+  
+
+/* Mobile Menu */
+.mobile-menu{
+    display: none;
+}
+
+/* menu toggle icon */
+.menu-icon {
+    position: relative;
+    width: 40px; /* Width of the menu bars */
+    height: 24px; /* Total height of the menu icon */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Equal spacing between bars */
+    align-items: center;
+    cursor: pointer; /* Pointer cursor for interactivity */
+}
+
+.menu-icon div {
+    width: 100%; /* Full width of the menu icon */
+    height: 5px; /* Height of each bar */
+    background-color: white; /* White bars */
+    border-radius: 4px; /* Rounded edges for bars */
+}
+
+.navbar .mobile-menu-toggle {
+    color: white;
+    cursor: pointer;
+}
+
+.navbar .mobile-menu-items {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    background: black;
+    opacity: 0.95;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+
+
+}
+
+.navbar .mobile-menu-items.active {
+    transform: translateX(0);
+}
+
+.navbar .mobile-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.2rem;
+}
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    display: flex; /* Enable horizontal slide effect */
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Slides */
+.mySlides {
+    min-width: 100%; /* Each slide takes full width */
+    transition: transform 0.5s ease-in-out; /* Smooth horizontal transition */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    position: relative;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Ensure images cover the entire slide */
+}
+
+/* Caption/Text Overlays */
+.text {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+}
+
+.text h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.text p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.text .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 32px;
+    background: #74cbdb;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.text .btn:hover {
+    background: #5aa1b3;
+}
+
+/* Dots/Indicators */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #717171;
+}
+
+
+/* Product Card */
+.product-container {
+    background-color: #f3f4f8;
+    padding: 40px; /* Add padding around the container for spacing */
+}
+
+.product-container h1 {
+    text-align: center;
+    color: #81849f;
+    font-size: 36px; /* Increase font size for the heading */
+    font-weight: bold;
+    margin-bottom: 30px; /* Add more space below the heading */
+  
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #e5e5eb;
+    border-radius: 12px; /* Make corners slightly rounder */
+    max-width: 1000px; /* Increase max width */
+    margin: 0 auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly larger shadow */
+    padding: 30px; /* Increase padding for more spacing inside the card */
+}
+
+.image-container img {
+    max-width: 350px; /* Increase image size */
+    border-radius: 12px; /* Make image corners rounder */
+}
+
+.content {
+    padding-left: 40px; /* Increase space between the image and text */
+}
+
+.content h2 {
+    font-size: 28px; /* Increase font size for subheading */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 18px; /* Increase font size for paragraph */
+    line-height: 1.8; /* Slightly increase line height for better readability */
+    margin-bottom: 30px;
+}
+
+.product-container .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem; /* Increase padding for a larger button */
+    border: 1px solid #a5a7b8;
+    border-radius: 32px;
+    background: #74cbdb;
+    font-size: 18px; /* Increase button font size */
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.product-container .btn:hover {
+    background: #81849f;
+    color: white;
+    border-color: white; /* Darker background on hover */
+}
+
+/* Footer */
+/* Footer */
+.footer {
+    background-color:#8d84aa; 
+    padding: 4rem 2rem;
+    color: #fff;
+    
+}
+
+.footer .footer-logo img {
+    width: 150px; /* Adjust logo width for better visibility */
+    height: auto;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.footer .social-links ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.2rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer .social-links img {
+    width: 30px;
+    height: 30px;
+    
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer .social-links img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.grid--4-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.footer-heading {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.address-col address,
+.nav-col ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-style: normal;
+    
+   
+}
+
+address ul li {
+    line-height: 3;
+}
+.nav-col ul {
+    line-height: 3;
+}
+
+.address-col a,
+.nav-col a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    
+}
+
+.address-col a:hover,
+.nav-col a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Men Page */
+
+/* Banner */
+
+
+/* Men Page Banner */
+/* Men Page Banner */
+.men-banner {
+    width: 100%; /* Full width of the banner */
+    height: 50vh; /* Adjust height to half the viewport */
+    position: relative; /* Ensure proper positioning */
+    overflow: hidden; /* Hide any overflow from the image */
+}
+
+.men-banner img {
+    width: 100%; /* Ensure the image spans the full width */
+    height: 100%; /* Ensure the image fills the banner's height */
+    object-fit: cover;
+    object-position: center; /* Cover the entire banner area while maintaining the image's aspect ratio */
+}
+
+/* Image Gallery */
+/* Gallery Item Layout */
+/* General Styles for Gallery */
+div.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures spacing between image and text */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    background: white; /* White background for gallery cards */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%; /* Ensures equal height for all boxes */
+}
+
+div.gallery:hover {
+    border-color: #777;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover; /* Ensures consistent image sizing */
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+    flex-grow: 1; /* Ensures the description section fills remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /* Even spacing between lines of text */
+}
+
+div.desc .product-link {
+    color: #4a4a68;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+div.desc .product-link:hover {
+    color: #fc5d66;
+}
+
+/* Responsive Columns */
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%; /* Default 4 columns */
+    margin-bottom: 20px;
+    display: flex; /* Ensure items inside responsive div stay flexible */
+    box-sizing: border-box;
+}
+
+.responsive .gallery {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure equal height */
+}
+
+/* Clearfix for Gallery Layout */
+div.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Sign Up Page */
+
+/* Signup Box */
+
+
+/* Form Group */
+.signup-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); /* Subtracting navbar height */
+    padding: 2rem;
+}
+
+/* Signup Box */
+.signup-box {
+    background-color: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form Header */
+.signup-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #4a4a68; /* Dark purple */
+    font-weight: bold;
+}
+
+/* Form Group */
+.signup-form {
+    width: 100%; /* Ensure full width for input fields */
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group input {
+    width: 90%;
+    max-width: 350px;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #dcdce6;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #f9f9fc;
+}
+
+.form-group input:focus {
+    border-color: #81849f; /* Purple border on focus */
+    background-color: #fff;
+}
+
+/* Sign-Up Button */
+.form-actions {
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn-signup {
+    width: 90%;
+    max-width: 350px;
+    padding: 0.8rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, #74b1db, #74cbdb); /* Gradient color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-signup:hover {
+    background: linear-gradient(to right, #4a4a68, #81849f);
+    transform: scale(1.1);
+}
+
+/* Footer Text */
+.form-footer {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #666666;
+}
+
+.form-footer a {
+    color: #6363e3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-footer a:hover {
+    color: #aa63e3;
+    text-decoration: underline;
+    
+}
+
+
+/* Contact Page */
+
+
+/* Customer Service Form Wrapper */
+.customer-service-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); /* Adjust for navbar height */
+    padding: 2rem;
+    background-color: #f3f4f8; /* Light grey background */
+}
+
+/* Customer Service Box */
+.customer-service-box {
+    background-color: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form Header */
+.customer-service-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #4a4a68; /* Dark purple */
+    font-weight: bold;
+}
+
+.customer-service-box p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+/* Customer Service Form */
+.customer-service-form {
+    width: 100%; /* Ensure full width for input fields */
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+    width: 100%; /* Ensure all form groups take full width */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #4a4a68;
+    font-weight: bold;
+}
+
+.form-group .required {
+    color: red;
+    font-size: 0.9rem;
+}
+
+/* Input Fields, Select Dropdown, and Textarea */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 300px; /* Standardize width for all inputs */
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #dcdce6;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #f9f9fc;
+    color: #4a4a68;
+
+}
+
+.form-group textarea {
+    resize: none; /* Prevent resizing */
+    height: 150px; /* Adjust height for message box */
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #81849f; /* Purple border on focus */
+    background-color: #fff;
+}
+
+/* Submit Button */
+.btn-submit {
+    width: 100px; /* Match button width with input fields */
+    padding: 0.8rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, #74b1db, #74cbdb); /* Gradient color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(to right, #4a4a68, #81849f);
+    transform: scale(1.1);
+}
+
+
+/* .form-footer {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #666666;
+}
+
+.form-footer a {
+    color: #6363e3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-footer a:hover {
+    color: #aa63e3;
+    text-decoration: underline;
+} */
+
+/* 
+About Us Page */
+/* About Us Page */
+.about-header {
+    background-color: #81849f; /* Dark purple */
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-top: 80px; /* To compensate for the fixed navbar */
+}
+
+.about-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.about-content {
+    background-color: #f3f4f8; /* Light grey background */
+    padding: 2rem 1rem;
+    line-height: 1.8;
+    color: #4a4a68; /* Darker text for readability */
+}
+
+.about-content .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    color: #3e3f4d; /* Accent purple for headings */
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    
+}
+
+.about-content ul {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.about-content ul li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Product Details Page */
+
+.product-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f3f4f8; /* Light grey background */
+    min-height: calc(100vh - 80px); /* Full height minus navbar */
+}
+
+.product-box {
+    display: flex;
+    gap: 2rem;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Product Image Section */
+.product-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.product-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Slideshow Arrows */
+.w3-display-left, .w3-display-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.w3-display-left {
+    left: 10px;
+}
+
+.w3-display-right {
+    right: 10px;
+}
+
+.w3-display-left:hover, .w3-display-right:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Product Details Section */
+.product-detail-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.product-detail-box h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4a4a68;
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    color: #81849f;
+    margin-bottom: 1.5rem;
+}
+
+.product-options {
+    margin-bottom: 1.5rem;
+}
+
+.product-options label {
+    font-size: 1rem;
+    color: #4a4a68;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.product-options select,
+.product-options input {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #dcdce6;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.product-options select:focus,
+.product-options input:focus {
+    border-color: #81849f;
+}
+
+.product-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.product-actions .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart {
+    background-color: #74cbdb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.add-to-cart:hover {
+    background-color: #4a4a68;
+    transform: scale(1.1);
+}
+
+/* Like Button Styling */
+.like-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Circle Container for Heart Icon */
+.circle {
+    width: 40px; /* Adjust size */
+    height: 40px; /* Adjust size */
+    background-color: #74cbdb; /* Light background for visibility */
+    border: 1px solid #dcdce6; /* Optional border */
+    border-radius: 50%; /* Makes the container a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Heart Icon Styling */
+.heart-icon {
+    width: 20px; /* Adjust heart icon size */
+    height: 20px;
+    display: block;
+}
+
+/* Hover Effect for Circle */
+.like-button:hover .circle {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+/* 
+Product Description */
+/* Product Description Section */
+.product-description {
+    background-color: #f9f9fc; /* Light background for contrast */
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-description h2 {
+    font-size: 1.8rem;
+    color: #4a4a68;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.description-heading {
+    font-size: 1.2rem;
+    color: #81849f;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.description-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4a4a68;
+    margin-bottom: 1.5rem;
+}
+
+.product-description h3 {
+    font-size: 1.4rem;
+    color: #4a4a68;
+    margin-bottom: 1rem;
+}
+
+.features-list {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+    font-size: 1rem;
+    color: #4a4a68;
+    line-height: 1.6;
+}
+
+.size-disclaimer, .color-disclaimer {
+    font-size: 0.9rem;
+    color: #81849f;
+    margin-bottom: 1rem;
+}
+
+.size-disclaimer strong, .color-disclaimer strong {
+    color: #4a4a68;
+}
+
+
+
+
+/* Saved Items */
+
+/* Saved Items Message Section */
+.saved-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f3f4f8; /* Matches site background */
+    min-height: calc(100vh - 80px); /* Full height minus navbar */
+}
+
+.message-box {
+    max-width: 600px;
+    width: 90%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.message-box p {
+    font-size: 1.2rem;
+    color: #4a4a68; /* Matches site text color */
+    margin: 0;
+    font-weight: bold;
+}
+
+
+
+/* Cart Page */
+/* CheckOut Page */
+
+
+/* Cart Items Message Section */
+/* Checkout Page Styles */
+.checkout-container {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    background-color: #f8f8f8; /* Slightly lighter background */
+    padding: 8px;
+}
+
+.checkout-container * {
+    box-sizing: border-box;
+}
+
+.checkout-container .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+}
+
+.checkout-container .col-25 {
+    flex: 25%;
+}
+
+.checkout-container .col-50 {
+    flex: 50%;
+}
+
+.checkout-container .col-75 {
+    flex: 75%;
+}
+
+.checkout-container .col-25,
+.checkout-container .col-50,
+.checkout-container .col-75 {
+    padding: 0 16px;
+}
+
+.checkout-container .container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.checkout-container input[type="text"] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Emphasize Total Price */
+.container total-price {
+    font-size: 20px; /* Larger font size */
+    font-weight: bold; /* Make it bold */
+    color: #000; /* Ensure it's a darker color */
+    text-align: right; /* Align it to the right */
+    margin-top: 10px; /* Add some spacing at the top */
+}
+
+.checkout-container label {
+    margin-bottom: 10px;
+    display: block;
+    font-weight: bold;
+    color: #555;
+}
+
+.checkout-container .icon-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkout-container .icon-container img {
+    margin-right: 10px;
+    width: 40px; /* Adjust icon size */
+    height: auto;
+}
+
+.checkout-container .btn {
+    background: linear-gradient(to right, #74b1db, #74cbdb);
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+
+    display: inline-block; /* Ensures it behaves like a button */
+    text-align: center; /* Centers text inside the button */
+    text-decoration: none; 
+}
+
+.checkout-container .btn:hover {
+    background: linear-gradient(to right, #4a4a68, #81849f);
+} 
+
+.checkout-container .col-25 .container a {
+    color: #2196F3;
+    text-decoration: none;
+}
+
+.checkout-container .col-25 .container a:hover {
+    text-decoration: underline;
+}
+
+
+.checkout-container hr {
+    border: 1px solid lightgrey;
+    margin: 20px 0;
+}
+
+.checkout-container span.price {
+    float: right;
+    color: grey;
+    font-weight: bold;
+}
+.checkout-container .container .total-price {
+    font-size: 20px; /* Larger font size */
+    font-weight: bold; /* Make it bold */
+    color: #000; /* Ensure it's a darker color */
+    text-align: right; /* Align it to the right */
+    margin-top: 10px; /* Add some spacing at the top */
+}
+
+
+
+/* 
+Approve for successful Payment */
+
+/* Payment Success Page Styles */
+.success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.success-box {
+    max-width: 500px;
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.success-icon {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+.success-box h1 {
+    font-size: 2rem;
+    color: #4a4a68;
+    margin-bottom: 1rem;
+}
+
+.success-box p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.success-box p strong {
+    color: #000;
+}
+
+.success-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.success-container .success-box .success-actions .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    background-color: #81849f;
+}
+
+
+
+
+.success-container .success-box .success-actions .btn:hover {
+    background-color: #656882;
+}
+
+
+
+/* media queries */
+
+
+@media (max-width: 1200px) {
+
+}
+ 
+
+
+@media (max-width: 1024px) {
+    .grid--4-cols {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .footer .footer-logo img {
+        width: 120px; /* Scale down the logo */
+    }
+
+    .footer .social-links ul {
+        justify-content: center; /* Center-align social links */
+    }
+}
+
+@media(max-width: 992px) {
+    /* Product Details Page */
+    .product-box {
+        flex-direction: column; /* Stack content vertically */
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .product-image {
+        width: 100%; /* Take full width for smaller screens */
+        justify-content: center;
+    }
+
+    .product-image img {
+        max-width: 80%; /* Reduce image size for medium screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .product-detail-box {
+        padding: 1rem;
+    }
+
+    .product-detail-box h1 {
+        font-size: 1.8rem; /* Adjust heading size */
+    }
+
+    .product-price {
+        font-size: 1.3rem; /* Adjust price font size */
+    }
+
+    .product-options select,
+    .product-options input {
+        max-width: 100%; /* Inputs take full width */
+    }
+
+    .product-actions {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 0.8rem;
+    }
+
+    .add-to-cart {
+        width: 100%; /* Full width buttons */
+    }
+
+    .circle {
+        width: 36px; /* Slightly smaller circle */
+        height: 36px;
+    }
+
+    .heart-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+
+    /* Image Gallery */
+    .responsive {
+        width: 33.33333%; /* 3 columns for tablets */
+    }
+    
+
+}
+   
+
+@media(max-width: 768px) {
+
+    .main-menu-items {
+        display: none;
+    }
+
+    .navbar .mobile-menu {
+        display: block;
+    }
+
+    .navbar .mobile-menu-toggle {
+        display: block;
+        padding: 10px;
+    }
+
+    /*Hero Section*/
+    .text h1 {
+        font-size: 1.5rem;
+    }
+
+    .text p {
+        font-size: 0.9rem;
+    }
+
+    .text .btn {
+        font-size: 0.9rem;
+    }
+    /* product */
+    .card {
+        flex-direction: column; /* Stack content vertically */
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .image-container img {
+        max-width: 100%; /* Make image take full width */
+    }
+
+    .content {
+        padding-left: 0; /* Remove padding between image and text */
+        margin-top: 20px; /* Add space above text content */
+        text-align: center; /* Center-align text */
+    }
+
+    .content h2 {
+        font-size: 24px; /* Slightly smaller font size */
+    }
+
+    .content p {
+        font-size: 16px; /* Reduce paragraph font size */
+        line-height: 1.6; /* Slightly tighter line spacing */
+    }
+
+    .product-container h1 {
+        font-size: 28px; /* Reduce heading size for smaller screens */
+    }
+
+    .product-container .btn {
+        font-size: 16px; /* Smaller button font */
+        padding: 0.5rem 1rem; /* Adjust button padding */
+    }
+
+    /* footer */
+    .grid--4-cols {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 2rem;
+    }
+
+    .footer .footer-logo img {
+        margin: 0 auto;
+    }
+
+    .address-col,
+    .nav-col {
+        text-align: center; /* Center-align text for smaller screens */
+    }
+
+    /* Image Gallery */
+    .responsive {
+        width: 50%; /* Keep 2 columns for tablets and smaller screens */
+    }
+    
+    /* Men Page */
+    /* Banner */
+    .men-banner {
+        height: 40vh; /* Reduce banner height for smaller screens */
+    }
+
+
+    /* Product Details  Page */
+
+    .product-box {
+        flex-direction: column; /* Stack image and details vertically */
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .product-image, .product-detail-box {
+        flex: none;
+        width: 100%;
+    }
+
+    .product-detail-box h1 {
+        font-size: 1.5rem; /* Smaller font for smaller screens */
+    }
+
+    .product-price {
+        font-size: 1.2rem;
+    }
+
+    .product-options select,
+    .product-options input {
+        max-width: 100%; /* Ensure full width on small screens */
+    }
+
+    .w3-display-left, .w3-display-right {
+        padding: 8px; /* Reduce size of arrows */
+        font-size: 12px; /* Adjust font size */
+    }
+
+    .w3-display-left {
+        left: 5px; /* Move closer to the edge */
+    }
+
+    .w3-display-right {
+        right: 5px; /* Move closer to the edge */
+    }
+
+
+    /* Saved or Liked Items */
+    .message-box {
+        padding: 1.5rem;
+    }
+
+    .message-box p {
+        font-size: 1rem;
+    }
+
+
+    /* Cart Page */
+    .message-box {
+        padding: 1.5rem;
+    }
+
+    .message-box p {
+        font-size: 1rem;
+    }
+
+
+
+    /* Payment Success Page */
+    .success-box {
+        padding: 1.5rem; /* Reduce padding for smaller screens */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Slightly smaller buttons */
+        padding: 0.7rem 1.2rem;
+    }
+} 
+
+@media (min-width: 620px) and (max-width: 680px) {
+    /* Specific range for 620px - 680px */
+    .responsive {
+        width: 50%; /* Force 2-column layout */
+    }
+
+    div.gallery {
+        margin-top: 0.5rem; /* Reduce margins for better spacing */
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    /* hero */
+    .text {
+        bottom: 8%; /* Adjust position for smaller screens */
+        width: 90%; /* Ensure text box doesn't take too much space */
+        padding: 0.8rem 1rem;
+    }
+
+    .text h1 {
+        font-size: 1.3rem; /* Reduce font size for headings */
+    }
+
+    .text p {
+        font-size: 0.85rem; /* Reduce font size for paragraph text */
+        line-height: 1.5; /* Improve readability with tighter spacing */
+    }
+
+    .text .btn {
+        font-size: 0.85rem; /* Smaller button font */
+        padding: 0.5rem 1rem; /* Compact button size */
+        border-radius: 25px; /* Adjust radius for smaller buttons */
+    }
+
+    .dot {
+        height: 12px; /* Reduce dot size */
+        width: 12px;
+        margin: 0 2px;
+    }
+
+    .mySlides img {
+        object-fit: cover;
+        height: 100vh; /* Ensure image covers full viewport height */
+    }
+
+    /* Product */
+
+    .card {
+        flex-direction: column; /* Stack the image and text vertically */
+        padding: 15px; /* Reduce overall padding */
+    }
+
+    .image-container img {
+        max-width: 100%; /* Make the image responsive */
+        height: auto; /* Ensure aspect ratio is maintained */
+    }
+
+    .content {
+        padding-left: 0; /* Remove horizontal padding */
+        margin-top: 15px; /* Add space between image and text */
+        text-align: center; /* Center-align text for smaller screens */
+    }
+
+    .content h2 {
+        font-size: 18px; /* Slightly smaller heading */
+    }
+
+    .content p {
+        font-size: 14px; /* Adjust paragraph font size for better readability */
+        line-height: 1.4; /* Slightly tighter line spacing */
+    }
+
+    .product-container h1 {
+        font-size: 22px; /* Reduce heading size for smaller screens */
+    }
+
+    .product-container .btn {
+        font-size: 14px; /* Smaller button font size */
+        padding: 0.4rem 0.8rem; /* Compact button padding */
+        border-radius: 24px; /* Smaller border radius for buttons */
+    }
+
+ 
+    /* footer */
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer-heading {
+        font-size: 1.2rem;
+    }
+
+    .footer .footer-logo img {
+        width: 100px; /* Smaller logo for very small screens */
+    }
+
+    .social-links ul {
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    .footer .social-links img {
+        width: 25px; /* Smaller icons */
+        height: 25px;
+    }
+
+    .address-col address,
+    .nav-col ul {
+        margin-bottom: 1.5rem; /* Space between sections */
+    }
+
+    .address-col a,
+    .nav-col a {
+        font-size: 0.9rem; /* Adjust link font size */
+    }
+
+
+
+
+    /* Men Page */
+    /* Banner */
+
+    .men-banner {
+        height: 35vh; /* Further reduce height for extra small screens */
+    }
+
+    /* Product Details Page */
+
+    .product-box {
+        padding: 1rem; /* Reduce padding */
+        gap: 1rem; /* Smaller gaps */
+    }
+
+    .product-image img {
+        max-width: 100%; /* Use full width */
+        margin: 0 auto; /* Center the image */
+    }
+
+    .w3-display-left, .w3-display-right {
+        width: 30px; /* Smaller arrows */
+        height: 30px;
+        background-color: rgba(0, 0, 0, 0.6); /* Visible arrows */
+    }
+
+    .w3-display-left {
+        left: 10px; /* Closer to image edge */
+    }
+
+    .w3-display-right {
+        right: 10px;
+    }
+
+    .product-detail-box h1 {
+        font-size: 1.5rem; /* Smaller font for product name */
+        text-align: center; /* Center-align for readability */
+    }
+
+    .product-price {
+        font-size: 1.2rem; /* Reduce price font size */
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .product-options label {
+        font-size: 0.9rem; /* Smaller labels */
+    }
+
+    .product-options select,
+    .product-options input {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .add-to-cart {
+        font-size: 0.9rem; /* Smaller button font */
+        padding: 0.6rem 1rem; /* Compact buttons */
+    }
+
+    .circle {
+        width: 28px; /* Smaller circle */
+        height: 28px;
+    }
+
+    .heart-icon {
+        width: 14px; /* Smaller heart icon */
+        height: 14px;
+    }
+
+
+
+
+}
+@media (max-width: 619px) {
+    .responsive {
+        width: 50%; /* Fix for 2-column layout at smaller screen sizes */
+    }
+
+    div.gallery {
+        margin: 0.5rem; /* Reduce margin for tighter spaces */
+    }
+}
+
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 2rem 1rem; /* Compact padding for small screens */
+    }
+
+    .grid--4-cols {
+        grid-template-columns: 1fr; /* Single-column layout */
+        gap: 1.5rem; /* Smaller gaps between sections */
+    }
+
+    .footer .footer-logo img {
+        width: 90px; /* Smaller logo for compact devices */
+        height: auto;
+        display: block;
+        margin: 0 auto 1.5rem; /* Center logo with spacing */
+    }
+
+    .social-links ul {
+        justify-content: center; /* Center-align social icons */
+        gap: 1rem; /* Small gap between icons */
+    }
+
+    .footer .social-links img {
+        width: 20px; /* Smaller icon size */
+        height: 20px;
+    }
+
+    .footer-heading {
+        font-size: 1rem; /* Reduce heading size */
+        text-align: center; /* Center-align headings */
+    }
+
+    .address-col,
+    .nav-col {
+        text-align: center; /* Center-align text for all sections */
+    }
+
+    .address-col address,
+    .nav-col ul {
+        margin-bottom: 1rem; /* Space between sections */
+    }
+
+    .address-col a,
+    .nav-col a {
+        font-size: 0.9rem; /* Slightly smaller font size for links */
+    }
+
+    /* Adjust spacing for visual balance */
+    .address-col address {
+        line-height: 1.4; /* Better readability for addresses */
+    }
+
+    /* Hero Section */
+
+    .text h1 {
+        font-size: 1.2rem;
+    }
+
+    .text p {
+        font-size: 0.8rem;
+    }
+
+    .text .btn {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .responsive {
+        width: 100%; /* Single column for small smartphones */
+    }
+
+    div.gallery {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+  
+
+   
+
+    /* Men Page */
+    /* Banner */
+    .men-banner {
+        height: 35vh; /* Further reduce height for extra small screens */
+    }
+
+
+    /* Sign Up form */
+    .signup-box {
+        padding: 1rem;
+        box-shadow: none; /* Remove box shadow for simplicity on small devices */
+        border-radius: 8px; /* Slightly smaller border radius */
+    }
+
+    .form-group input {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.7rem;
+    }
+
+    .btn-signup {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .signup-box h2 {
+        font-size: 1.5rem; /* Adjust heading size for small screens */
+        margin-bottom: 1rem;
+    }
+
+    .form-footer {
+        font-size: 0.8rem; /* Smaller footer text */
+    }
+
+
+    /* Product Details Page */
+    .product-box {
+        flex-direction: column; /* Stack image and details */
+        align-items: center; /* Center-align content */
+    }
+
+    .product-image {
+        margin-bottom: 1rem; /* Space between image and details */
+    }
+
+    .product-image img {
+        max-width: 90%; /* Reduce image size */
+    }
+
+    .w3-display-left, .w3-display-right {
+        padding: 6px; /* Smaller arrows for small screens */
+        font-size: 10px; /* Further reduce font size */
+    }
+
+    .w3-display-left {
+        left: 2px; /* Keep arrows within view */
+    }
+
+    .w3-display-right {
+        right: 2px; /* Keep arrows within view */
+    }
+
+    .product-detail-box h1 {
+        font-size: 1.3rem; /* Smaller heading size */
+    }
+
+    .product-price {
+        font-size: 1rem; /* Adjust price text */
+    }
+
+    .product-options select,
+    .product-options input {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    .add-to-cart {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .circle {
+        width: 24px; /* Compact circle */
+        height: 24px;
+    }
+
+    .heart-icon {
+        width: 12px; /* Smaller heart */
+        height: 12px;
+    }
+
+
+
+    /* Payment Success page */
+    .success-box {
+        padding: 1rem; /* Further reduce padding */
+    }
+
+    .btn {
+        font-size: 0.85rem; /* Smaller buttons for small devices */
+        padding: 0.6rem 1rem;
+    }
+} 
+
+/* For extra small screens, make it one column */
+@media (max-width: 320px) {
+    .responsive {
+        width: 100%; /* 1 column for very small screens */
+    }
+}
+
+/* Responsive Layout */
+@media (max-width: 800px) {
+    .checkout-container .row {
+        flex-direction: column-reverse;
+    }
+
+    .checkout-container .col-25 {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .checkout-container .container {
+        padding: 15px;
+    }
+
+    .checkout-container input[type="text"] {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .checkout-container .btn {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .checkout-container h3 {
+        font-size: 18px;
+    }
+
+    .checkout-container .icon-container img {
+        width: 30px; /* Smaller icons for mobile */
+    }
+}
